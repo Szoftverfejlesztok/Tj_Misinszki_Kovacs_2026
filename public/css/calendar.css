@@ -1,0 +1,222 @@
+.calendar {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    table-layout: fixed;
+}
+
+.calendar th,
+.calendar td {
+    width: 14.2857%;
+    text-align: center;
+}
+
+.calendar th {
+    background-color: #f3f3f3;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.calendar td {
+    height: 80px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+    padding: 5px;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+    overflow: hidden;
+}
+
+.calendar td:hover {
+    background-color: #e6f7ff !important;
+    cursor: pointer;
+}
+
+.calendar td.today {
+    background-color: #cce5ff;
+    border: 2px solid #0078d7;
+}
+
+.calendar-day.today {
+    background-color: #dfffe0;
+    border: 2px solid #28a745;
+    font-weight: bold;
+}
+
+.month-navigation {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.month-navigation a {
+    text-decoration: none;
+    padding: 5px 12px;
+    background-color: #0078d7;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.month-navigation a:hover {
+    background-color: #005ea0;
+}
+
+.cbx-yellow {
+    background-color: #FFF7CC !important;
+}
+
+.cbx-green {
+    background-color: #E9F7EF !important;
+}
+
+.calendar-bottom-section {
+    padding-bottom: 60px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.no-assignment {
+    text-align: center;
+    font-size: 18px;
+    margin: 30px 0;
+    color: #666;
+    font-weight: 500;
+}
+
+.assignment-container {
+    max-width: 1200px;
+    margin: 35px auto 0 auto;
+    padding: 0 15px;
+}
+
+.assignment-container h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.assignment-card {
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    width: 260px;
+    min-height: 110px;
+    padding: 15px;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    vertical-align: top;
+}
+
+.inspection-container {
+    max-width: 1200px;
+    margin: 35px auto 0 auto;
+    padding: 0 15px;
+}
+
+.inspection-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.no-record {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+}
+
+.inspection-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.inspection-card {
+    width: 280px;
+    min-height: 220px;
+    background: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    padding: 22px 18px 18px 18px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.inspection-card::before {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 14px auto;
+    background-image: url('/images/121-1215004_graduation-icon-png-image-college-student-icon-png-removebg-preview.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card-header {
+    margin-bottom: 14px;
+}
+
+.student-name {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 6px;
+}
+
+.room-number {
+    display: block;
+    font-size: 15px;
+    color: #666;
+}
+
+.card-body {
+    font-size: 16px;
+    color: #222;
+    margin-bottom: 18px;
+    word-break: break-word;
+}
+
+.card-footer {
+    font-size: 14px;
+    color: #888;
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+}
+
+@media (max-width: 768px) {
+    .calendar td {
+        height: 70px;
+    }
+
+    .inspection-title {
+        font-size: 22px;
+    }
+
+    .inspection-card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .student-name {
+        font-size: 20px;
+    }
+}

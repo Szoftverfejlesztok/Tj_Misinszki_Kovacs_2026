@@ -1,0 +1,167 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh; 
+    padding: 40px 20px;
+}
+
+.bg-img {
+    background-image: url('/images/login.jpg');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    filter: brightness(0.9);
+}
+
+.bg-img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 33, 33, 0.35);
+}
+
+.content {
+    width: 100%;
+    max-width: 420px;
+}
+
+.regist {
+    text-align: center;
+    width: 100%;
+    font-family: 'Work Sans', sans-serif;
+    font-size: clamp(32px, 6vw, 66px); 
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: whitesmoke;
+    margin-bottom: 35px;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1.5px solid #fff;
+    background: transparent; 
+    padding: 14px 10px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.field input::placeholder {
+    color: rgba(255,255,255,0.8);
+}
+
+.field input:focus,
+.field select:focus {
+    outline: none;
+    border-bottom: 2px solid #ffffff;
+}
+
+.field select {
+    color: #fff;
+    appearance: none;
+}
+
+.field select option {
+    background-color: #2e2a2a;
+    color: white;
+}
+
+.field input:-webkit-autofill,
+.field input:-webkit-autofill:hover,
+.field input:-webkit-autofill:focus,
+.field input:-webkit-autofill:active {
+    -webkit-text-fill-color: #ffffff !important;
+    caret-color: #ffffff !important;
+    -webkit-box-shadow: 0 0 0 1000px #111111 inset !important;
+    box-shadow: 0 0 0 1000px #111111 inset !important;
+    border-bottom: 1.5px solid #ffffff !important;
+}
+
+.gomb {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #222121;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.gomb:hover {
+    background-color: #2a2a2a;
+    transform: scale(1.03);
+}
+
+.gomb:active {
+    transform: scale(0.97);
+}
+
+.error-text {
+    color: #dc2626;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.login {
+    margin-top: 3%;
+    display: flex;
+    align-items: center;  
+    justify-content: center; 
+    gap: 5px; 
+}
+
+.regisztraltal {
+    margin: 0; 
+    color: #ffffff; 
+}
+
+@media (max-width: 768px) {
+    body {
+        align-items: flex-start;   
+        padding-top: 40px;
+    }
+
+    .content {
+        max-width: 100%;
+    }
+
+    .field input,
+    .field select {
+        font-size: 17px;
+    }
+}
+
+@media (max-height: 700px) {
+    body {
+        align-items: flex-start;
+        padding-top: 30px;
+    }
+}

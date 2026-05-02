@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.login, .register {
+    display: inline-flex;
+    align-items: center;
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    font-size: clamp(12px, 1vw, 14px);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    color: #eaeaea;
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 2px;
+    background: transparent;
+    transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.login:hover, .register:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.landing-bg {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.landing-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: 0;
+}
+
+.landing-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+    z-index: 1;
+}
+
+.container {
+    position: absolute; 
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(40px, 8vw, 82px);
+    letter-spacing: 0.14em;
+    color: white;
+}
+
+.text {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    font-family: 'Cinzel', serif;
+    font-size: clamp(16px, 2vw, 22px);
+    color: rgb(255, 255, 255);
+    text-shadow:
+        0 4px 4px rgba(0,0,0,0.45),
+        0 0 6px rgba(0, 0, 0, 3);
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.auth-links {
+    position: relative;
+    z-index: 1001;
+}
+
+@media (max-width: 768px) {
+.top-nav {
+top: 1rem;
+right: 1rem;
+    }
+}
+
+.main-menu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+    margin-top: 40%; 
+}
+
+.main-menu-list {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+    margin: 0;
+    padding: 0;
+
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+}
+
+.main-menu-list li a {
+    text-decoration: none;
+    color: #000;
+    padding: 8px 0;
+    display: inline-block;
+    transition: 0.2s ease;
+}
+
+.main-menu-list li a:hover {
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+
+    .main-menu {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .main-menu-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+}

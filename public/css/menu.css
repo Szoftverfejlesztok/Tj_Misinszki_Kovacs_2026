@@ -1,0 +1,90 @@
+
+.nav-row {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.nav-left {
+    position: relative;
+    left: auto;
+    transform: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 200px;
+    margin: 0;
+    display: block;
+}
+
+.main-menu {
+    width: 100%;
+    border-top: none;
+    border-bottom: 1px solid #000;
+    margin-top: 10px;
+}
+
+.main-menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    min-height: 48px;
+}
+
+.main-menu-list li {
+    padding: 0;
+}
+
+.main-menu-list a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.125rem;
+    font-family: 'Noto Serif', serif;
+    transition: transform 0.15s ease;
+}
+
+.main-menu-list a:hover {
+    transform: scale(1.1) !important;
+    text-decoration: none !important;
+    color: #000 !important;
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+.nav-right {
+    position: absolute;
+    right: 0;
+    top: 65px;
+    display: flex;
+    align-items: center;
+    min-width: 0;
+}
+
+.nav-right .inline-flex {
+    white-space: nowrap;
+}
+
+.nav-right .inline-flex div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+}
+
+.dropdown-trigger {
+    width: 12rem; 
+}
+
+.x-dropdown-content {
+    text-align: right; 
+}
